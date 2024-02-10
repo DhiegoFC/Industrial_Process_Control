@@ -1,2 +1,2 @@
 # Industrial_Process_Control
-The Public Repository of Industrial Process Control discipline taught by Prof. Dr. Dhiego Fernandes Carvalho at UNESP Sorocaba
+The public repository for the Industrial Process Control course, taught by Prof. Dr. Dhiego Fernandes Carvalho, at State University of São Paulo, Sorocaba, Brazil.
