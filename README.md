@@ -18,9 +18,8 @@ Public Repository for 'Industrial Process Control', a undergraduate course offer
 * Learn to simulate Industrial Processes in Python (Google Colab) and Simulink (Matlab).
 * Apply Knowledge in Real Engineering Situations (depending on the available material).
 
-
 #### Evaluation
-Most evaluation tests will be carried out using the Simulink Software Tool (Matlab) or programming in Python (Google Colab). Depending on available materials, the evaluation tests might be switched to practical experiments in the Electronics Laboratory.
+Most evaluation tests will be carried out using the Simulink Software Tool (Matlab) and/or maybe programming in Python (Google Colab). Depending on available materials, the evaluation tests might be switched to practical experiments in the Electronics Laboratory.
 
 #### Prerequisites
 * Advanced knowledge in Calculus, especially in the Laplace transform of a function.
