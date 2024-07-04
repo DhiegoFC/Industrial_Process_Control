@@ -33,7 +33,7 @@ If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 * Introduction of Industrial Process Control course <a href="lessons/week_01/week_01_Introduction_to_CPI_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
 
 **Week 02: Dynamic Characteristics of Industrial Processes**
-* Dynamic Characteristics of Industrial Processes <a href="week_02_Dynamic_Characteristics_of_Industrial_Processes_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
+* Dynamic Characteristics of Industrial Processes <a href="lessons/week_02/week_02_Dynamic_Characteristics_of_Industrial_Processes_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
 * Exercise Week 02: [Google Colab](lessons/week_02/sources/week_02.ipynb) 
 
 **Week 02: test**
