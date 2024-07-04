@@ -7,7 +7,6 @@
 Public Repository for 'Industrial Process Control', a undergraduate course offered by the Department of Control and Automation Engineering at the State University of São Paulo (UNESP), Institute of Science and Technology, Sorocaba (ICTS).
 
 #### Objectives
-
 * Understand the Concept and Importance of Industrial Process Control.
 * Comprehend the Dynamic Characteristics of Industrial Processes.
 * Learn to Model Industrial Processes.
@@ -19,7 +18,7 @@ Public Repository for 'Industrial Process Control', a undergraduate course offer
 * Apply Knowledge in Real Engineering Situations (depending on the available material).
 
 #### Evaluation
-Most evaluation tests will be carried out using the Simulink Software Tool (Matlab) and/or maybe programming in Python (Google Colab). Depending on available materials, the evaluation tests might be switched to practical experiments in the Electronics Laboratory.
+Most evaluation tests will be carried out using the Simulink Software Tool (Matlab) and maybe programming in Python (Google Colab). Depending on available materials, the evaluation tests might be switched to practical experiments in the Electronics Laboratory.
 
 #### Prerequisites
 * Advanced knowledge in Calculus, especially in the Laplace transform of a function.
@@ -29,8 +28,12 @@ Most evaluation tests will be carried out using the Simulink Software Tool (Matl
 #### Contact
 If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 
-**Week 01: Course Presentation and Introduction of Hydraulic and Pneumatic Circuits**
+**Week 01: Course Presentation and Introduction of Industrial Process Control**
 * Course Presentation <a href="lessons/week_01/week_01_Course_Presentation_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
-* Introduction of Industrial Process Control course 
+* Introduction of Industrial Process Control course <a href="lessons/week_01/week_01_Introduction_to_CPI_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
+
+**Week 02: Dynamic Characteristics of Industrial Processes**
+* Dynamic Characteristics of Industrial Processes <a href="lessons/week_02/week_02_Dynamic_Characteristics_of_Industrial_Processes_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
+* Exercise Week 02: (Google Colab)[lessons/week_02/sources/week_02.ipynb] 
 
 **Week 02: test**
