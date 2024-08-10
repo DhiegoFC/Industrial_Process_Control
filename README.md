@@ -38,4 +38,6 @@ If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 
 **Week 03 and 04 : Mathematical Modeling of Industrial Processes**
 * Mathematical Modeling of Industrial Processes - Parte 01 <a href="lessons/week_03/teste.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
+* Tank Water Level Control: [Google Colab](lessons/week_03/sources/Tank_Water_Level_Control.ipynb)
+* Tank Temperature Controle: [Google Colab](lessons/week_03/sources/Tank_Temperature_Control.ipynb)
 * Mathematical Modeling of Industrial Processes - Parte 02 <a href="lessons/week_03/teste.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
