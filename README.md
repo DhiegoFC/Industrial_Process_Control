@@ -36,4 +36,6 @@ If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 * Dynamic Characteristics of Industrial Processes <a href="lessons/week_02/week_02_Dynamic_Characteristics_of_Industrial_Processes_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
 * Exercise Week 02: [Google Colab](lessons/week_02/sources/week_02.ipynb) 
 
-**Week 03:**
+**Week 03 and 04 : Mathematical Modeling of Industrial Processes**
+* Mathematical Modeling of Industrial Processes - Parte 01 <a href="lessons/week_03/teste.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
+* Mathematical Modeling of Industrial Processes - Parte 02 <a href="lessons/week_03/teste.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
