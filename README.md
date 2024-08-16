@@ -40,4 +40,5 @@ If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 * Mathematical Modeling of Industrial Processes - Parte 01 <a href="lessons/week_03/week_03_Industrial_Process_Modeling_Parte_1_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
 * Tank Water Level Control: [Google Colab](lessons/week_03/sources/Tank_Water_Level_Control.ipynb)
 * Tank Temperature Controle: [Google Colab](lessons/week_03/sources/Tank_Temperature_Control.ipynb)
-* Mathematical Modeling of Industrial Processes - Parte 02 <a href="lessons/week_03/teste.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
+* Mathematical Modeling of Industrial Processes - Parte 02 <a href="lessons/week_04/week_04_Industrial_Process_Modeling_Parte_2_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
+* Simulation of Open-Loop and Closed-Loop Processes using Step Input and Time Delay: [Google Colab](lessons/week_03/sources/simulation_OL_and_CL.ipynb)
