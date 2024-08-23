@@ -44,4 +44,4 @@ If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 * Simulation of Open-Loop and Closed-Loop Processes using Step Input and Time Delay: [Google Colab](lessons/week_04/sources/simulation_OL_and_CL.ipynb)
 
 **Week 05: Mathematical Modeling in Simulink**
-* First-Order and Second-Order Systems in Simulink: [Lesson in Simulink](lessons/week_05/)
+* First-Order and Second-Order Systems in Simulink: [Exercise](lessons/week_05/)
