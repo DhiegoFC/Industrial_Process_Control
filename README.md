@@ -45,3 +45,6 @@ If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 
 **Week 05: Mathematical Modeling in Simulink**
 * First-Order and Second-Order Systems in Simulink: [Exercise](lessons/week_05/)
+
+**Week 07: PID Controllers**
+* PID Controller <a href="lessons/week_07/week_07_PDI_Controller_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
