@@ -50,4 +50,4 @@ If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 * PID Controller <a href="lessons/week_07/week_07_PID_Controller_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
 * Exercise PID Types: [Simulink](lessons/week_07/sources/pid_types)
 * Actuator Saturation: [Simulink](lessons/week_07/sources/actuator_saturation)
-* Derivate Filtering: [Simulink](lessons/week_07sources/derivate_filtering)
+* Derivate Filtering: [Simulink](lessons/week_07/sources/derivate_filtering)
