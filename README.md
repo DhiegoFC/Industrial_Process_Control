@@ -51,3 +51,4 @@ If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 * Exercise PID Types: [Simulink](lessons/week_07/sources/pid_types)
 * Actuator Saturation: [Simulink](lessons/week_07/sources/actuator_saturation)
 * Derivate Filtering: [Simulink](lessons/week_07/sources/derivate_filtering)
+* Setpoint Weighting: [Google Colab](lessons/week_07/sources/setpoint_weighting)
