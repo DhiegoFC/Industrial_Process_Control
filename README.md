@@ -34,25 +34,25 @@ If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 
 **Week 02: Dynamic Characteristics of Industrial Processes**
 * Dynamic Characteristics of Industrial Processes <a href="lessons/week_02/week_02_Dynamic_Characteristics_of_Industrial_Processes_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
-* Exercise Week 02: [Google Colab](lessons/week_02/sources/week_02.ipynb) 
+* Exercise Week 02: [[Google Colab](lessons/week_02/sources/week_02.ipynb)]
 
 **Week 03 and 04 : Mathematical Modeling of Industrial Processes**
 * Mathematical Modeling of Industrial Processes - Parte 01 <a href="lessons/week_03/week_03_Industrial_Process_Modeling_Parte_1_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
-* Exercise: Tank Water Level Control [Google Colab](lessons/week_03/sources/Tank_Water_Level_Control.ipynb)
-* Exercise: Tank Temperature Controle [Google Colab](lessons/week_03/sources/Tank_Temperature_Control.ipynb)
+* Exercise: Tank Water Level Control [[Google Colab](lessons/week_03/sources/Tank_Water_Level_Control.ipynb)]
+* Exercise: Tank Temperature Controle [[Google Colab](lessons/week_03/sources/Tank_Temperature_Control.ipynb)]
 * Mathematical Modeling of Industrial Processes - Parte 02 <a href="lessons/week_04/week_04_Industrial_Process_Modeling_Parte_2_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
-* Exercise: Simulation of Open-Loop and Closed-Loop Processes using Step Input and Time Delay [Google Colab](lessons/week_04/sources/simulation_OL_and_CL.ipynb)
+* Exercise: Simulation of Open-Loop and Closed-Loop Processes using Step Input and Time Delay [[Google Colab](lessons/week_04/sources/simulation_OL_and_CL.ipynb)]
 
 **Week 05: Mathematical Modeling in Simulink**
 * Exercise: First-Order and Second-Order Systems in Simulink [Simulink](lessons/week_05/)
 
 **Week 07: PID Controllers**
 * PID Controller <a href="lessons/week_07/week_07_PID_Controller_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
-* Exercise: PID Types [Simulink](lessons/week_07/sources/pid_types)
-* Exercise: Actuator Saturation [Simulink](lessons/week_07/sources/actuator_saturation)
-* Exercise: Derivate Filtering [Simulink](lessons/week_07/sources/derivate_filtering)
-* Exercise: Setpoint Weighting [Google Colab](lessons/week_07/sources/setpoint_weighting/setpoint_weitghting.ipynb)
+* Exercise: PID Types [[Simulink](lessons/week_07/sources/pid_types)]
+* Exercise: Actuator Saturation [[Simulink](lessons/week_07/sources/actuator_saturation)]
+* Exercise: Derivate Filtering [[Simulink](lessons/week_07/sources/derivate_filtering)]
+* Exercise: Setpoint Weighting [[Google Colab](lessons/week_07/sources/setpoint_weighting/setpoint_weitghting.ipynb)]
 
 **Week 08: Tuning PID Controllers**
 * Tuning PID Controllers <a href="lessons/week_08/week_08_PID_Controllers_Tunning_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
-* Exercice: Tuning Methods for PID Controllers [[Simulink](lessons/week_08/sources/)]
+* Exercisee: Tuning Methods for PID Controllers [[Simulink](lessons/week_08/sources/)]
