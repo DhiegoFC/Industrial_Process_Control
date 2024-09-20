@@ -44,7 +44,7 @@ If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 * Exercise: Simulation of Open-Loop and Closed-Loop Processes using Step Input and Time Delay [[Google Colab](lessons/week_04/sources/simulation_OL_and_CL.ipynb)]
 
 **Week 05: Mathematical Modeling in Simulink**
-* Exercise: First-Order and Second-Order Systems in Simulink [Simulink](lessons/week_05/)
+* Exercise: First-Order and Second-Order Systems in Simulink [[Simulink](lessons/week_05/)]
 
 **Week 07: PID Controllers**
 * PID Controller <a href="lessons/week_07/week_07_PID_Controller_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
