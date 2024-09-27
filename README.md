@@ -55,4 +55,7 @@ If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 
 **Week 08: Tuning PID Controllers**
 * Tuning PID Controllers <a href="lessons/week_08/week_08_PID_Controllers_Tunning_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
-* Exercisee: Tuning Methods for PID Controllers [[Simulink](lessons/week_08/sources/)]
+* Exercise: Tuning Methods for PID Controllers [[Simulink](lessons/week_08/sources/)]
+
+**Weeks 09 and 10: PID Controller on Microcontrollers**
+* Exercise: Tuning PID Controller on Arduino UNO [[INO](lessons/week_09/sources/)]

@@ -1,4 +1,4 @@
-# PID Controller on Arduino UNO
+# Tuning PID Controller on Arduino UNO
 
 Create the following circuit with two capacitors and two resistors. It is possible to tune the Arduino's PWM output according to the setpoint. You can use either a fixed setpoint or a variable one by using a potentiometer.
 
@@ -74,13 +74,3 @@ double pid(double error)
   double output = kp * ((proportional) + (ki * integral) + (kd * derivative));  // PID Ideal (ISA) summation
   return output;
 }
-
-
-
-
-
-
-
-
-
-
