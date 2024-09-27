@@ -1,76 +1,38 @@
-# Tuning PID Controller on Arduino UNO
+# Tuning a PWM-Based PID Controller on Arduino UNO
 
-Create the following circuit with two capacitors and two resistors. It is possible to tune the Arduino's PWM output according to the setpoint. You can use either a fixed setpoint or a variable one by using a potentiometer.
+In this project, you will create a circuit using **two capacitors** and **two resistors** to implement a **PID controller** that controls the Arduino's PWM output. You can tune the system's output according to a **setpoint**, which can be either **fixed** or dynamically adjusted using a **potentiometer**.
 
-<img src="./lesson_images/arduino_uno_pid.png" alt="Arduino UNO PID Components" width="1000"/>
+### Breadboard Visualization of the PID Circuit on Arduino UNO
 
-<img src="./lesson_images/arduino_uno_pid_circuit.jpg" alt="Arduino UNO PID Circuit" width="1000"/>
+Below is the **breadboard view** showing how the components, including capacitors, resistors, and the potentiometer, are connected to the Arduino Uno:
 
-With the code below, upload it to the Arduino Uno's flash memory using the Arduino IDE platform. Observe how the system behaves by using the Arduino IDE's Serial Plotter, adjusting the PID controller variables, as well as the delay in the loop() function. You can also download the code [here](./pid_controller_arduino_uno/pid_controller_arduino_uno.ino),
+<img src="./lesson_images/arduino_uno_pid.png" alt="Arduino UNO PID Visualization (Breadboard View)" width="1000"/>
 
-```cpp
-const int INPUT_PIN = A0;  // Analog input pin (sensor)
-const int OUTPUT_PIN = 3;  // PWM output pin (controller)
-const int POT_PIN = A1;    // Pin where the potentiometer is connected
+### Schematic Diagram of the PID Circuit on Arduino UNO
 
-double dt, last_time;
-double integral, previous, output = 0;
-double kp, ki, kd;
-double setpoint = 75.00; // If using a variable setpoint with the potentiometer, comment out this line
-//double setpoint;
-void setup()
-{
-  kp = 1.98;
-  ki = 1.45;
-  kd = 0.002;
-  last_time = 0;
-  Serial.begin(9600);
-  analogWrite(OUTPUT_PIN, 0);  // Initializes the output to 0
-  for(int i = 0; i < 50; i++)
-  {
-    Serial.print(setpoint);
-    Serial.print(",");
-    Serial.println(0);
-    delay(100);
-  }
-  delay(100);
-}
+The following image shows the **schematic view** of the circuit, which provides a clear understanding of the connections between the components:
 
-void loop()
-{
-  // Reads the value of the potentiometer (between 0 and 1023) and adjusts the setpoint dynamically. 
-  // Comment out the line below if you want to use a fixed setpoint value
-  //setpoint = map(analogRead(POT_PIN), 0, 1023, 0, 255);  // Adjusts the setpoint between 0 and 255 (adjust as necessary)
+<img src="./lesson_images/arduino_uno_pid_schematic.jpg" alt="Arduino UNO PID Circuit (Schematic View)" width="1000"/>
 
-  double now = millis();
-  dt = (now - last_time) / 1000.00;  // Calculates the time interval (dt)
-  last_time = now;
+### Steps to Implement:
 
-  // Reads the sensor value (from 0 to 1023) and maps it to the range of 0 to 255
-  double actual = map(analogRead(INPUT_PIN), 0, 1023, 0, 255);
-  double error = setpoint - actual;
-  output = pid(error);  // Calculates the PID output value
+1. **Circuit Setup**: 
+   - Use the **breadboard** layout for physical connections, or refer to the **schematic** diagram for a deeper understanding of the circuit.
+   - These components help to smooth out the PWM output and stabilize the response of the system. Optionally, connect a **potentiometer** to dynamically adjust the setpoint, allowing real-time tuning of the system.
 
-  analogWrite(OUTPUT_PIN, output);  // Applies the calculated output
+2. **Code Upload**:
+   - Use the **Arduino IDE** to upload the code to the **Arduino Uno's flash memory**. The code implements a basic PID controller where you can adjust the **Kp**, **Ki**, and **Kd** values to fine-tune the system's response.
+   
+3. **Observe the System**:
+   - Open the **Arduino IDE's Serial Plotter** to visualize how the system behaves in real time. Adjust the **PID variables** and the **delay** in the `loop()` function to see how the response changes.
+   
+4. **Download the Code**:
+   - You can download the code from this [link](./pid_controller_arduino_uno/pid_controller_arduino_uno.ino).
 
-  // Sends the setpoint and the actual value to the Serial Plotter, separated by commas
-  Serial.print(setpoint);
-  Serial.print(",");
-  Serial.print(actual);
-  Serial.print(",");
-  Serial.print(error);
-  Serial.print(",");
-  Serial.println(output);
+### Tuning the PID Controller:
+- Adjust the **`Kp` (proportional)** to control how much the output responds to the error.
+- Modify **`Ki` (integral)** to account for accumulated errors over time.
+- Fine-tune **`Kd` (derivative)** to counteract quick changes in error, stabilizing the response.
 
-  delay(0);  // Insert delay in the circuit
-}
+By experimenting with these parameters and observing the response in the **Serial Plotter**, you can fine-tune your control system for optimal performance.
 
-double pid(double error)
-{
-  double proportional = error;
-  integral += error * dt;  // Updates the integral term
-  double derivative = (error - previous) / dt;  // Calculates the derivative term
-  previous = error;
-  double output = kp * ((proportional) + (ki * integral) + (kd * derivative));  // PID Ideal (ISA) summation
-  return output;
-}
