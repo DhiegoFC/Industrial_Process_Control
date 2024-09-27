@@ -36,3 +36,11 @@ The following image shows the **schematic view** of the circuit, which provides 
 
 By experimenting with these parameters and observing the response in the **Serial Plotter**, you can fine-tune your control system for optimal performance.
 
+## Acknowledgments
+
+This project was inspired by and incorporates code from the following source:
+
+- [PID Controller Project by careyi3](https://gist.github.com/careyi3/02a57dfd3a62a96d46171489c83488bd)
+
+Special thanks to careyi3 for sharing their code and insights, which were invaluable in developing this project.
+
