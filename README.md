@@ -58,4 +58,5 @@ If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 * Exercise: Tuning Methods for PID Controllers [[Simulink](lessons/week_08/sources/)]
 
 **Weeks 09 and 10: PID Controller on Microcontrollers**
-* Exercise: Tuning PID Controller on Arduino UNO [[INO](lessons/week_09/sources/)]
+* Exercise: Tuning PID Controller on Arduino UNO [[Arduino IDE](lessons/week_09/sources/)]
+* Exercise: Tuning a PWM-Based PID Controller with Derivative Filter, Anti-Windup, and Setpoint Weighting Techniques on Arduino UNO [[Arduino IDE](lessons/week_10/sources/)]
