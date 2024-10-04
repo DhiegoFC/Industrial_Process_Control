@@ -1,11 +1,10 @@
-const int INPUT_PIN = A0;  // Analog input pin (sensor) 
+const int INPUT_PIN = A0;  // Analog input pin (sensor)
 const int OUTPUT_PIN = 3;  // PWM output pin (controller)
 const int POT_PIN = A1;    // Pin where the potentiometer is connected
 
 double dt, last_time;
 double integral = 0, previous_error = 0, previous_filtered_derivative = 0, output = 0;
 double kp, ki, kd;
-//double setpoint = 100.00;  // If using a variable setpoint with the potentiometer, comment out this line
 double setpoint;
 double alpha = 0.2;  // Filter coefficient for derivative action (between 0 and 1)
 unsigned long startTime;   // To store the start time
@@ -13,16 +12,20 @@ unsigned long currentTime; // To calculate the current time
 
 bool use_derivative_filter = false;  // Option to enable or disable derivative filtering
 bool use_anti_windup = false;  // Option to enable or disable anti-windup
+bool use_reference_weighting = false;  // Option to enable or disable reference weighting
 
 double Kbc;  // Back-calculation gain for anti-windup
+double beta;  // Reference weighting factor (between 0 and 1)
 
 void setup()
 {
   kp = 1.0;
   ki = 0.3;
   kd = 0.003;
-  Kbc = ki * kp ; // Anti-windup back-calculation gain formula 
+  Kbc = ki * kp; // Anti-windup back-calculation gain formula 
+  beta = 0.8;
   last_time = 0;
+  beta = 0.8;
   Serial.begin(115200);
   analogWrite(OUTPUT_PIN, 0);  // Initializes the output to 0
   startTime = millis();  // Store the start time for time tracking
@@ -42,7 +45,6 @@ void setup()
 void loop()
 {
   // Reads the value of the potentiometer (between 0 and 1023) and adjusts the setpoint dynamically. 
-  // Comment out the line below if you want to use a fixed setpoint value
   setpoint = map(analogRead(POT_PIN), 0, 1023, 0, 255);  // Adjusts the setpoint between 0 and 255 (adjust as necessary)
 
   double now = millis();
@@ -54,7 +56,7 @@ void loop()
   double error = setpoint - actual;
 
   // Use the error in the PID calculation
-  output = pid_isa(error);  // Calculates the PID output value
+  output = pid_isa(error, actual, setpoint);  // Pass actual and setpoint to the PID function
 
   analogWrite(OUTPUT_PIN, output);  // Applies the calculated output
 
@@ -73,17 +75,21 @@ void loop()
   delay(12);  // Insert delay in the circuit (optional, but usually set to a small value)
 }
 
-double pid_isa(double error)
+double pid_isa(double error, double actual, double setpoint)
 {
-  // Proportional term
-  double proportional = error;
+  // Proportional term with reference weighting
+  double proportional;
+  if (use_reference_weighting) {
+    proportional = beta * (setpoint - actual);  // Weighted setpoint influence
+  } else {
+    proportional = error;  // Standard proportional without reference weighting
+  }
 
   // Integral term
   integral += error * dt;
 
   // Derivative term
   double derivative;
-  
   if (use_derivative_filter) {
     // Apply the derivative filter
     double raw_derivative = (error - previous_error) / dt;
@@ -110,7 +116,7 @@ double pid_isa(double error)
     integral += Kbc * (output_saturated - output);  // Adjust the integral term based on saturation
   }
 
-   // Apply anti-windup with conditional integration if enabled
+  // Apply anti-windup with conditional integration if enabled
   /*if (use_anti_windup) {
     if ((output < 255 && output > 0) || (error * output < 0)) {
       // Only integrate if the output is not saturated or if error helps reduce saturation
@@ -122,6 +128,4 @@ double pid_isa(double error)
   }*/
 
   return output_saturated;  // Return the saturated output
-
-  //return output;
 }
