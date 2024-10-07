@@ -6,7 +6,7 @@ double dt, last_time;
 double integral = 0, previous_error = 0, previous_filtered_derivative = 0, output = 0;
 double kp, ki, kd;
 double setpoint;
-double alpha = 0.2;  // Filter coefficient for derivative action (between 0 and 1)
+
 unsigned long startTime;   // To store the start time
 unsigned long currentTime; // To calculate the current time
 
@@ -14,18 +14,19 @@ bool use_derivative_filter = false;  // Option to enable or disable derivative f
 bool use_anti_windup = false;  // Option to enable or disable anti-windup
 bool use_reference_weighting = false;  // Option to enable or disable reference weighting
 
-double Kbc;  // Back-calculation gain for anti-windup
-double beta;  // Reference weighting factor (between 0 and 1)
-
+double Kbc;  // Reference anti-windup back-calculation gain 
+double beta;  // Reference Proportional weighting factor 
+double alpha; // Reference filter coefficient
 void setup()
 {
   kp = 1.0;
   ki = 0.3;
   kd = 0.003;
-  Kbc = ki * kp; // Anti-windup back-calculation gain formula 
-  beta = 0.8;
   last_time = 0;
-  beta = 0.8;
+  Kbc = ki * kp; // Anti-windup back-calculation gain formula 
+  beta = 0.8;  // Proportional weighting factor
+  alpha = 0.2;  // Filter coefficient for derivative action (between 0 and 1)
+
   Serial.begin(115200);
   analogWrite(OUTPUT_PIN, 0);  // Initializes the output to 0
   startTime = millis();  // Store the start time for time tracking
