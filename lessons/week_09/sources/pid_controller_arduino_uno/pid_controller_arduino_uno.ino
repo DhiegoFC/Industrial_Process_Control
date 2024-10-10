@@ -5,14 +5,18 @@ const int POT_PIN = A1;    // Pin where the potentiometer is connected
 double dt, last_time;
 double integral, previous, output = 0;
 double kp, ki, kd;
-double setpoint = 100.00;  // If using a variable setpoint with the potentiometer, comment out this line
+double setpoint = 200.00;  // If using a variable setpoint with the potentiometer, comment out this line
+//double setpoint;
 unsigned long startTime;   // To store the start time
 unsigned long currentTime; // To calculate the current time
 
 void setup()
 {
-  kp = 1.98;
-  ki = 1.45;
+  //kp = 1.98;
+  //ki = 1.45;
+  //kd = 0.003;
+  kp = 2.0;
+  ki = 1.7;
   kd = 0.003;
   last_time = 0;
   Serial.begin(115200);
@@ -35,7 +39,7 @@ void loop()
 {
   // Reads the value of the potentiometer (between 0 and 1023) and adjusts the setpoint dynamically. 
   // Comment out the line below if you want to use a fixed setpoint value
-  // setpoint = map(analogRead(POT_PIN), 0, 1023, 0, 255);  // Adjusts the setpoint between 0 and 255 (adjust as necessary)
+  //setpoint = map(analogRead(POT_PIN), 0, 1023, 0, 255);  // Adjusts the setpoint between 0 and 255 (adjust as necessary)
 
   double now = millis();
   dt = (now - last_time) / 1000.00;  // Calculates the time interval (dt)
@@ -74,5 +78,7 @@ double pid(double error)
   previous = error;
   
   double output = kp * ((proportional) + (ki * integral) + (kd * derivative));  // PID Ideal (ISA) summation
+
+ 
   return output;
 }

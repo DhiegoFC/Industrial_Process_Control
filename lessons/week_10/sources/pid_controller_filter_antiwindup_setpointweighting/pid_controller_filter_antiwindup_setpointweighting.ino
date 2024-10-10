@@ -5,12 +5,12 @@ const int POT_PIN = A1;    // Pin where the potentiometer is connected
 double dt, last_time;
 double integral = 0, previous_error = 0, previous_filtered_derivative = 0, output = 0;
 double kp, ki, kd;
-double setpoint;
+double setpoint = 200;
 
 unsigned long startTime;   // To store the start time
 unsigned long currentTime; // To calculate the current time
 
-bool use_derivative_filter = false;  // Option to enable or disable derivative filtering
+bool use_derivative_filter = true;  // Option to enable or disable derivative filtering
 bool use_anti_windup = false;  // Option to enable or disable anti-windup
 bool use_reference_weighting = false;  // Option to enable or disable reference weighting
 
@@ -19,13 +19,14 @@ double beta;  // Reference Proportional weighting factor
 double alpha; // Reference filter coefficient
 void setup()
 {
-  kp = 1.0;
+  kp = 0.67;
   ki = 0.3;
-  kd = 0.003;
+  kd = 0.2;
   last_time = 0;
-  Kbc = ki * kp; // Anti-windup back-calculation gain formula 
-  beta = 0.8;  // Proportional weighting factor
-  alpha = 0.2;  // Filter coefficient for derivative action (between 0 and 1)
+  Kbc = ki; // Anti-windup back-calculation gain formula 
+  //Kbc = 0.5; // Anti-windup back-calculation gain if 'ki' is not well tunned. 
+  beta = 0.5;  // Proportional weighting factor
+  alpha = 0.02;  // Filter coefficient for derivative action (between 0 and 1)
 
   Serial.begin(115200);
   analogWrite(OUTPUT_PIN, 0);  // Initializes the output to 0
@@ -46,7 +47,7 @@ void setup()
 void loop()
 {
   // Reads the value of the potentiometer (between 0 and 1023) and adjusts the setpoint dynamically. 
-  setpoint = map(analogRead(POT_PIN), 0, 1023, 0, 255);  // Adjusts the setpoint between 0 and 255 (adjust as necessary)
+  //setpoint = map(analogRead(POT_PIN), 0, 1023, 0, 255);  // Adjusts the setpoint between 0 and 255 (adjust as necessary)
 
   double now = millis();
   dt = (now - last_time) / 1000.00;  // Calculates the time interval (dt)
@@ -119,7 +120,7 @@ double pid_isa(double error, double actual, double setpoint)
 
   // Apply anti-windup with conditional integration if enabled
   /*if (use_anti_windup) {
-    if ((output < 255 && output > 0) || (error * output < 0)) {
+    if ((output_saturated < 255 && output_saturated > 0) || (error * output_saturated < 0)) {
       // Only integrate if the output is not saturated or if error helps reduce saturation
       integral += error * dt;  // Update the integral term
     }
