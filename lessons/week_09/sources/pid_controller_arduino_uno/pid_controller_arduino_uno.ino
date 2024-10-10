@@ -12,9 +12,6 @@ unsigned long currentTime; // To calculate the current time
 
 void setup()
 {
-  //kp = 1.98;
-  //ki = 1.45;
-  //kd = 0.003;
   kp = 2.0;
   ki = 1.7;
   kd = 0.003;
@@ -79,6 +76,5 @@ double pid(double error)
   
   double output = kp * ((proportional) + (ki * integral) + (kd * derivative));  // PID Ideal (ISA) summation
 
- 
   return output;
 }
