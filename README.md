@@ -60,3 +60,6 @@ If you have any further questions, please contact me: dhiego.fernandes@unesp.br
 **Weeks 09 and 10: PID Controller on Microcontrollers**
 * Exercise: Tuning PID Controller on Arduino UNO [[Arduino IDE](lessons/week_09/sources/)]
 * Exercise: Tuning a PWM-Based PID Controller with Derivative Filter, Anti-Windup, and Setpoint Weighting Techniques on Arduino UNO [[Arduino IDE](lessons/week_10/sources/)]
+
+**Weeks 11 to 13: Advanced Control Techniques**
+* Advanced Controle Techniques <a href="lessons/week_11/week_10_Advanced_Controle_Techniques_CPI_Dhiego.pdf"> <img src="images/pdf_logo1.png" alt="PDF" width="23" height="23" /> </a>
