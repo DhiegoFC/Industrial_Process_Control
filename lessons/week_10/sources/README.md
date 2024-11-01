@@ -18,7 +18,7 @@ Once you've uploaded the code to the Arduino's flash memory, use the [provided P
 **You can also modify the Python script to use other libraries, such as `PyQtGraph`, for improved real-time data visualization beyond the capabilities of `matplotlib`. This can provide a smoother, more responsive observation experience.**
 
 **Modifications:**
-Based on [Matheus Lima's code](https://github.com/matheuslimam/Atividade_CPI/blob/main/Atividades/realTimeSerial.py), now it is possible to have a smoother real time visualization on Arduino UNO PID Serial Output [here](./pid_control_arduino_uno_serial_read_real_time/). 
+Based on [Matheus Lima's code](https://github.com/matheuslimam/Atividade_CPI/blob/main/Atividades/realTimeSerial.py), now it is possible to have a smoother real time visualization on Arduino UNO PID Serial Output [here](./pid_control_arduino_uno_serial_read_real_time/pid_control_arduino_uno_serial_read_real_time.py). 
 
 ## What is the Electrical Circuit's Mathematical Model?
 
