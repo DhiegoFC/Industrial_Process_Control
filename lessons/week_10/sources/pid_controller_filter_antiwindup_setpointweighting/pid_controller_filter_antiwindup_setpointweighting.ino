@@ -5,7 +5,7 @@ const int POT_PIN = A1;    // Pin where the potentiometer is connected
 double dt, last_time;
 double integral = 0, previous_error = 0, previous_filtered_derivative = 0, output = 0;
 double kp, ki, kd;
-double setpoint = 200;
+double setpoint = 50;
 
 unsigned long startTime;   // To store the start time
 unsigned long currentTime; // To calculate the current time
@@ -19,8 +19,11 @@ double beta;  // Reference Proportional weighting factor
 double alpha; // Reference filter coefficient
 void setup()
 {
-  kp = 0.67;
-  ki = 0.3;
+  //kp = 0.67;
+  //ki = 0.3;
+  //kd = 0.2;
+  kp = 1.17;
+  ki = 0.7;
   kd = 0.2;
   last_time = 0;
   Kbc = ki; // Anti-windup back-calculation gain formula 
@@ -42,12 +45,13 @@ void setup()
     delay(100);
   }
   delay(100);  // Small delay to allow the system to stabilize
+  
 }
 
 void loop()
 {
   // Reads the value of the potentiometer (between 0 and 1023) and adjusts the setpoint dynamically. 
-  //setpoint = map(analogRead(POT_PIN), 0, 1023, 0, 255);  // Adjusts the setpoint between 0 and 255 (adjust as necessary)
+  setpoint = map(analogRead(POT_PIN), 0, 1023, 0, 255);  // Adjusts the setpoint between 0 and 255 (adjust as necessary)
 
   double now = millis();
   dt = (now - last_time) / 1000.00;  // Calculates the time interval (dt)

@@ -17,6 +17,9 @@ Once you've uploaded the code to the Arduino's flash memory, use the [provided P
 
 **You can also modify the Python script to use other libraries, such as `PyQtGraph`, for improved real-time data visualization beyond the capabilities of `matplotlib`. This can provide a smoother, more responsive observation experience.**
 
+**Modifications:**
+Based on [Matheus Lima's code](https://github.com/matheuslimam/Atividade_CPI/blob/main/Atividades/realTimeSerial.py), now it is possible to have a smoother real time visualization on Arduino UNO PID Serial Output [here](./pid_control_arduino_uno_serial_read_real_time/). 
+
 ## What is the Electrical Circuit's Mathematical Model?
 
 Refer to the [provided circuit](../../week_09/sources/) to determine its mathematical model. Use this model to tune the PID controller on the Arduino using the **Skogestad, 2004** method. Update the [PID controller code](./pid_controller_filter_antiwindup_setpointweighting/pid_controller_filter_antiwindup_setpointweighting.ino) to include the tuning formula based on your calculations.
