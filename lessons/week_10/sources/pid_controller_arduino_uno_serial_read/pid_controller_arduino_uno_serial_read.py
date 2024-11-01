@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import time
 
 # Serial port configuration (adjust the port and baud rate as needed)
-ser = serial.Serial('COM7', 115200, timeout=0.1)  # Adjust 'COM3' to the correct Arduino port
+ser = serial.Serial('COM3', 115200, timeout=0.1)  # Adjust 'COM3' to the correct Arduino port
 
 # Initialize lists to store data
 time_data = []
